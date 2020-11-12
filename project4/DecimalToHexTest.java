@@ -4,6 +4,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test cases for the Decimal to Hex method.
+ *
+ * @author Harrison Douglass, Rira Shimizu, Crona Xu
+ * This version of the code has been adapted by Harrison Douglass from another version
+ * of this code originally written for Lab 9 by all of the authors listed above.
+ */
 public class DecimalToHexTest {
 
     /**

@@ -4,6 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test cases for the Binary to Hex method.
+ *
+ * @author Harrison Douglass
+ */
 public class BinaryToHexTest {
 
     /**

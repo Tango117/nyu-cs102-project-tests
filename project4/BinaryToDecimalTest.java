@@ -4,6 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Test cases for the Binary to Decimal method.
+ *
+ * @author Harrison Douglass
+ */
 public class BinaryToDecimalTest {
 
     /**
