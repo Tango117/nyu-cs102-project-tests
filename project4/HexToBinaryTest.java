@@ -64,25 +64,25 @@ public class HexToBinaryTest {
      */
     @Test
     public void testZero() {
-        assertEquals("0b0000", Converter.hexToBinary("0x0"));
+        assertEquals("0b0", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0x0")));
     }
 
     /**
      * Test inputting the hex representation of the max integer value.
-     * Expected result: 0b01111111111111111111111111111111
+     * Expected result: 0b1111111111111111111111111111111
      */
     @Test
     public void testMaxInt() {
-        assertEquals("0b01111111111111111111111111111111", Converter.hexToBinary("0x7FFFFFFF"));
+        assertEquals("0b1111111111111111111111111111111", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0x7FFFFFFF")));
     }
 
     /**
      * Test inputting the binary representation of 1 ("0x1")
-     * Expected result: 0b0001
+     * Expected result: 0b1
      */
     @Test
     public void testOne() {
-        assertEquals("0b0001", Converter.hexToBinary("0x1"));
+        assertEquals("0b1", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0x1")));
     }
 
     // These "arbitrary" values have been chosen such that all sequences of four binary characters will appear in at least one of the four tests.
@@ -94,7 +94,7 @@ public class HexToBinaryTest {
      */
     @Test
     public void testArbitraryValue1() {
-        assertEquals("0b110010110001", Converter.hexToBinary("0xCB1"));
+        assertEquals("0b110010110001", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0xCB1")));
     }
 
     /**
@@ -103,16 +103,16 @@ public class HexToBinaryTest {
      */
     @Test
     public void testArbitraryValue2() {
-        assertEquals("0b11101110111001010100", Converter.hexToBinary("0xEEE54"));
+        assertEquals("0b11101110111001010100", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0xEEE54")));
     }
 
     /**
      * Test inputting a third valid, arbitrary hex sequence.
-     * Expected result: 0b0001011101101111010101110000
+     * Expected result: 0b1011101101111010101110000
      */
     @Test
     public void testArbitraryValue3() {
-        assertEquals("0b0001011101101111010101110000", Converter.hexToBinary("0x176F570"));
+        assertEquals("0b1011101101111010101110000", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0x176F570")));
     }
 
     /**
@@ -121,7 +121,7 @@ public class HexToBinaryTest {
      */
     @Test
     public void testArbitraryValue4() {
-        assertEquals("0b101010010011110110000010", Converter.hexToBinary("0xA93D82"));
+        assertEquals("0b101010010011110110000010", TestUtils.removeLeadingZeroes(Converter.hexToBinary("0xA93D82")));
     }
 
 }
