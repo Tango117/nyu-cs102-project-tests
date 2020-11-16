@@ -48,11 +48,20 @@ public class BinaryToDecimalTest {
     }
 
     /**
-     * Test inputting a nonsense string that starts with the 0b prefix as the function argument.
+     * Test inputting a binary string that is *just barely* too long as the function argument.
      * Expected result: NumberFormatException
      */
     @Test(expected = NumberFormatException.class)
     public void invalidInput4() {
+        Converter.binaryToDecimal("0b10101010101010101010101010010101");
+    }
+
+    /**
+     * Test inputting a nonsense string that starts with the 0b prefix as the function argument.
+     * Expected result: NumberFormatException
+     */
+    @Test(expected = NumberFormatException.class)
+    public void invalidInput5() {
         Converter.binaryToDecimal("0bGGJHSDLlsadf");
     }
 

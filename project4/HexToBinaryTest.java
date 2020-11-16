@@ -56,6 +56,15 @@ public class HexToBinaryTest {
         Converter.hexToBinary("0xGGJHSDL");
     }
 
+    /**
+     * Test inputting a hex string that is just barely too long (9 hex characters)
+     * Expected result: NumberFormatException
+     */
+    @Test(expected = NumberFormatException.class)
+    public void invalidInput5() {
+        Converter.hexToBinary("0x555555555");
+    }
+
     // All of the following cases assume that the binary is padded with no more than three zeroes.
 
     /**

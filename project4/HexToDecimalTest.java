@@ -57,6 +57,15 @@ public class HexToDecimalTest {
     }
 
     /**
+     * Test inputting a hex string that is just barely too long (9 hex characters)
+     * Expected result: NumberFormatException
+     */
+    @Test(expected = NumberFormatException.class)
+    public void invalidInput5() {
+        Converter.hexToDecimal("0x555555555");
+    }
+
+    /**
      * Test inputting a valid hex string that is *just* over the limit.
      * Expected result: ArithmeticException
      */
