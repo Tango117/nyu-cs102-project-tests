@@ -31,11 +31,6 @@ public class MeteoriteDataGetByMass {
         TEST_METEORITE_DATA.getByMass(2, -1);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void getByMassDeltaGreaterThanMass() {
-        TEST_METEORITE_DATA.getByMass(10, 50);
-    }
-
     @Test
     public void getByMassEmptyCollection() {
         assertNull(new MeteoriteData().getByMass(50, 10));
@@ -54,11 +49,6 @@ public class MeteoriteDataGetByMass {
     @Test(expected = IllegalArgumentException.class)
     public void getByMassEmptyCollectionDeltaInvalid() {
         new MeteoriteData().getByMass(2, -1);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void getByMassEmptyCollectionDeltaGreaterThanMass() {
-        new MeteoriteData().getByMass(10, 50);
     }
 
     @Test
