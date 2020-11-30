@@ -32,18 +32,6 @@ public class MeteoriteConstructorGettersSetters {
         new Meteorite("Name", Integer.MIN_VALUE);
     }
 
-    @Test
-    public void getName() {
-        Meteorite m = new Meteorite("Name", 1);
-        assertEquals("Name", m.getName());
-    }
-
-    @Test
-    public void getID() {
-        Meteorite m = new Meteorite("Name", 1);
-        assertEquals(1, m.getID());
-    }
-
     @Test(expected = IllegalArgumentException.class)
     public void setMassInvalidZero() {
         Meteorite m = new Meteorite("Name", 1);
